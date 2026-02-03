@@ -15,7 +15,7 @@ export function executeMove(move, cubeGroup, rotationGroup, rotate) {
       break
 
     case "L2'":
-      rotate(cubeGroup.current, rotationGroup.current, 'x', -0.5, -2)
+      rotate(cubeGroup.current, rotationGroup.current, 'x', -0.5,)
       break
 
     case 'R':
@@ -57,6 +57,19 @@ export function executeMove(move, cubeGroup, rotationGroup, rotate) {
     case "B'":
       rotate(cubeGroup.current, rotationGroup.current, 'z', -0.5, -1)
       break
+
+    case 'M':
+      rotate(cubeGroup.current, rotationGroup.current, 'x', 0, -1)
+      break
+
+    case "M'":
+      rotate(cubeGroup.current, rotationGroup.current, 'x', 0, 1)
+      break
+
+    case "M2":
+      rotate(cubeGroup.current, rotationGroup.current, 'x', 0, -2)
+      break
+
 
     default:
       console.warn('Invalid move:', move)
