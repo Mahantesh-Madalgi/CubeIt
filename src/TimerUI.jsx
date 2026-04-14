@@ -73,32 +73,35 @@ export default function TimerUI({ appState, timeMs, scrambleText, inspectionTime
 
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
-          textAlign: 'center', paddingTop: '45px',
+          textAlign: 'center', paddingTop: '30px',
           opacity: isFocusMode ? 0 : 1,
           transition: 'opacity 0.6s ease-in-out',
           paddingLeft: '24px', paddingRight: '24px',
         }}>
+          {/* Main App Title */}
+          <div style={{
+            fontSize: '4em',
+            fontWeight: '900',
+            color: '#ffffff',
+            letterSpacing: '12px',
+            textTransform: 'uppercase',
+            marginBottom: '15px',
+            fontFamily: '"Cormorant Garamond", serif'
+          }}>
+            CUBE IT
+          </div>
+
           <div className="scramble-container" style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
             maxWidth: '700px', margin: '0 auto'
           }}>
-            <span style={{ 
-              fontSize: '2.2rem', color: '#00ff88', fontWeight: '700', 
-              fontFamily: '"Cormorant Garamond", serif', letterSpacing: '4px' 
-            }}>C</span>
-            
             <div className="scramble-text" style={{
-              fontSize: '0.82rem', color: 'rgba(255, 255, 255, 0.88)', 
+              fontSize: '1rem', color: 'rgba(255, 255, 255, 1)',
               fontFamily: 'monospace', letterSpacing: '2px', lineHeight: '1.7',
               wordBreak: 'break-word', flex: 1
             }}>
               {scrambleText.join(' ')}
             </div>
-
-            <span style={{ 
-              fontSize: '2.2rem', color: '#00ff88', fontWeight: '700', 
-              fontFamily: '"Cormorant Garamond", serif', letterSpacing: '4px' 
-            }}>I</span>
           </div>
         </div>
 
