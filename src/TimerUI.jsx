@@ -57,7 +57,7 @@ export default function TimerUI({ appState, timeMs, scrambleText, inspectionTime
         }
       `}</style>
 
-      {isMobile && (isInspecting || isReadyRed || isReadyGreen) && (
+      {isMobile && (isInspecting || isReadyRed || isReadyGreen || isRunning) && (
         <div
           className="touch-layer"
           onTouchStart={(e) => {
