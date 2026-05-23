@@ -9,7 +9,7 @@ import SidebarUI from './SidebarUI'
 import { generateScramble } from './utils/scrambler'
 import { executeMove } from './moves'
 import { loadData, saveData, exportData } from './utils/storage'
-import AboutUsUI from './AboutUsUI'
+import AboutUsUI from './AboutUsUi'
 
 /* ---------------- COLORS ---------------- */
 const COLORS = {
@@ -575,11 +575,11 @@ export default function App() {
       <div style={{
         position: 'absolute',
 
-        top: activeView === 'home' ? '50%' : '15%',
-        left: activeView === 'home' ? '50%' : (isMobile ? '50%' : '85%'),
-        transform: activeView === 'home' ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0.8)',
-        width: `${cubeSize}px`,
-        height: `${cubeSize}px`,
+        top: activeView === 'home' ? '45%' : '18%',
+        left: activeView === 'home' ? '50%' : (isMobile ? '50%' : '82%'),
+        transform: 'translate(-50%, -50%)',
+        width: activeView === 'home' ? `${cubeSize * 1.2}px` : `${cubeSize * 0.3}px`,
+        height: activeView === 'home' ? `${cubeSize * 1.2}px` : `${cubeSize * 0.3}px`,
         zIndex: 5,
         //if on mobile we hide the cube; if on desktop, we show the cube.
         opacity: (isFocusMode || (isMobile && activeView !== 'home')) ? 0 : 1,

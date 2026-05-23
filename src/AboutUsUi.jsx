@@ -6,7 +6,7 @@ function AboutUsUI({ setActiveView }) {
 
 
     <div className='about-us-container'>
-      <h1 className='heading'>About Us</h1>
+      <div className='heading-card'><h1 className='heading'>About Us</h1></div>
       <div className='card'><h2><img src="https://unpkg.com/lucide-static@latest/icons/timer.svg" alt="timer" width="32" height="32" className="heading-icon" style={{ verticalAlign: 'middle', marginRight: '10px', filter: 'invert(1)' }} />Modernizing the speedcubing experience</h2>
         <p>
           Cubeit combines high-performance timing tools with real-time 3D scramble visualization to create an immersive cubing experience.
@@ -23,59 +23,8 @@ function AboutUsUI({ setActiveView }) {
 
 
       </div>
-      <div className='card'><h3>difference between 2d timers and Cubeit</h3>
 
-      </div>
-      <table>
-        <tr>
-          <td className='traditional_td th'>
-            Traditional 2D Timers
-          </td>
-          <td className='cubeit_td th'>
-            Cubeit
-          </td>
-        </tr>
-        <tr>
-          <td className='traditional_td'>
-            Scramble visualization: Flat 2D grids with static images representing each face
-          </td>
-          <td className='cubeit_td'>
-            Scramble visualization: Fully interactive 3D cube with real-time rendering and manipulation
-          </td>
-        </tr>
-        <tr>
-          <td className='traditional_td'>
-            User experience: Linear, text-based presentation of moves without visual context
-          </td>
-          <td className='cubeit_td'>
-            User experience: Immersive 3D environment where users can see and interact with the cube as it scrambles
-          </td>
-        </tr>
-        <tr>
-          <td className='traditional_td'>
-            Engagement: Passive visualization that requires mental translation to understand cube state
-          </td>
-          <td className='cubeit_td'>
-            Engagement: Active visualization that enhances learning and retention through visual feedback
-          </td>
-        </tr>
-        <tr>
-          <td className='traditional_td'>
-            Technology: Basic web technologies with limited visual capabilities
-          </td>
-          <td className='cubeit_td'>
-            Technology: Modern 3D graphics with WebGL and advanced rendering techniques
-          </td>
-        </tr>
-        <tr>
-          <td className='traditional_td'>
-            Target Audience: Traditional cubers who prefer simple, text-based interfaces
-          </td>
-          <td className='cubeit_td'>
-            Target Audience: Modern cubers seeking engaging, visually immersive, and interactive tools
-          </td>
-        </tr>
-      </table>
+
       <div className='card'>
         <h2><img src="https://unpkg.com/lucide-static@latest/icons/medal.svg" alt="medal" width="32" height="32" className="heading-icon" style={{ verticalAlign: 'middle', marginRight: '10px', filter: 'invert(1)' }} />Our Mission</h2>
         <p>Cubeit is built to modernize the speedcubing experience through immersive and interactive tools. Unlike traditional timers that rely on flat 2D scramble grids, Cubeit features real-time 3D scramble visualization that allows users to view an actual 3D representation of their scrambled cube state.
