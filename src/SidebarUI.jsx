@@ -90,7 +90,12 @@ function HistoryPanel({ data, onSessionChange, onAddSession, onClearSession, onP
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
         <h3 style={{ margin: 0, fontSize: '0.7rem', fontWeight: '700', letterSpacing: '2px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>History</h3>
         <button
-          onClick={(e) => { e.currentTarget.blur(); onClearSession(); }}
+          onClick={(e) => {
+  e.currentTarget.blur();
+  if (window.confirm('Are you sure you want to clear all solves? This cannot be undone.')) {
+    onClearSession();
+  }
+}}
           style={{ background: 'transparent', color: 'rgba(255,255,255,0.35)', border: '0.5px solid rgba(255,255,255,0.12)', borderRadius: '6px', padding: '3px 9px', fontSize: '0.7rem', cursor: 'pointer', fontWeight: '600', transition: 'all 0.2s' }}
         >Clear</button>
       </div>
